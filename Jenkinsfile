@@ -20,9 +20,9 @@ pipeline {
         }
         failure {
             echo 'This will run only if failed'
-            mail to: 'jeroenifumi@gmail.com',
-                  subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                  body: "Something is wrong with ${env.BUILD_URL}"
+            //mail to: 'jeroenifumi@gmail.com',
+            //      subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+            //      body: "Something is wrong with ${env.BUILD_URL}"
             slackSend channel: '#jenkins',
                   color: 'danger',
                   message: "Build Failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
