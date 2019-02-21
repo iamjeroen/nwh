@@ -7,11 +7,6 @@ pipeline {
                 sh 'python --version'
             }
         }
-        stage('test') {
-            steps {
-                sh 'echo "Fail!"; exit 1'
-            }
-        }
     }
     post {
         always {
